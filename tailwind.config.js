@@ -25,7 +25,7 @@ export default {
             500: '#3fd89c',
           },
           yellow: {
-            500: '#dcf68b',
+            500: '#d8ff60',
           },
           purple:{
             500: '#f1c8f1',
@@ -37,10 +37,13 @@ export default {
             500: '#c3feac',
           },
           teal:{
-            500: '#2D9596',
+            500: '#9b0094',
           },
           darkTeal:{
-            500: '#093b55',
+            500: '#06002f',
+          },
+          burgendy:{
+            500: '#b90c4c',
           }
         },
         fontFamily: {

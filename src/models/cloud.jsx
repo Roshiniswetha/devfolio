@@ -7,7 +7,6 @@ import cloud from '../assets/glb/low_poly_cloud.glb';
 const Cloud = (props) => {
     const { scene, nodes, materials } = useGLTF(cloud);
     const cloudRef = useRef()
-    console.log(nodes, props)
     const numberOfObjects = 5;
 
 

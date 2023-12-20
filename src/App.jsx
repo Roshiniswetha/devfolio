@@ -2,8 +2,9 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import { Home, About, Experience, Contact } from './pages';
 import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-// import Footer from './components/Footer';
+import ProjectsPage from './pages/ProjectsPage';
+// import './assets/styles.scss'
+import Footer from './pages/Footer';
 
 const App = () => {
 return (
@@ -13,12 +14,11 @@ return (
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/experience' element={<Experience />} />
           <Route path='/skills' element={<Skills />} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects' element={<ProjectsPage />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </main>
   );

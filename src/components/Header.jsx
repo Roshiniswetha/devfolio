@@ -10,9 +10,8 @@ const Header = () => {
         className='w-10 h-10 rounded-lg items-center justify-center flex'
       >
         <img src={home} />
-        {/* <p className='blue-gradient_text'>RK</p> */}
       </NavLink>
-      <nav className='flex text-lg gap-7 font-medium'>
+      <nav className='flex text-lg gap-7 font-medium tracking-widest'>
         <NavLink
           to='/about'
           className={({ isActive }) =>
@@ -20,14 +19,6 @@ const Header = () => {
           }
         >
           About
-        </NavLink>
-        <NavLink
-          to='/experience'
-          className={({ isActive }) =>
-            isActive ? 'text-teal-500' : 'text-darkTeal-500'
-          }
-        >
-          Work
         </NavLink>
         <NavLink
           to='/projects'
@@ -53,6 +44,14 @@ const Header = () => {
         >
           Contact
         </NavLink>
+
+        {/* <NavLink
+          to=''
+          className= 'text-darkTeal-500'
+          download={'/documents/Roshini_Swetha_Frontend_Resume.pdf'}
+        > */}
+          <a className= 'text-darkTeal-500' href='/documents/Roshini_Swetha_Frontend_Resume.pdf' download>Resume</a>
+        {/* </NavLink> */}
       </nav>
     </header>
   );

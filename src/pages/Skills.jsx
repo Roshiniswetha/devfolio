@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 // import Image from "next/image";
-import { MENULINKS, SKILLS } from "../constants";
+import { SKILLS } from "../constants";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -14,32 +14,15 @@ const Skills = () => {
       { opacity: 0, duration: 0.5, stagger: 0.5 },
       "<"
     );
-
-    // ScrollTrigger.create({
-    //   trigger: targetSection.current.querySelector(".skills-wrapper"),
-    //   start: "100px bottom",
-    //   end: `center center`,
-    //   animation: revealTl,
-    //   scrub: 0,
-    // });
   }, [targetSection]);
 
   return (
-    <div className="bg-gradient-to-br from-yellow-500 to-white min-h-screen flex justify-center items-center">
+    <div className="bg-gradient-to-bl from-indigo-200 via-red-200 to-yellow-100 min-h-screen flex justify-center items-center">
     <section
-      className="w-full relative select-none mt-44"
-      id={MENULINKS[1].ref}
+      className="w-full relative select-none mt-2 flex lg:flex-row flex-col max-container lg:items-center h-full"
       ref={targetSection}
     >
-      <div className="text-darkTeal-500 section-container py-16 flex flex-col justify-center">
-        {/* <img
-          src="/right-pattern.svg"
-          alt=""
-          className="absolute hidden right-0 bottom-2/4 w-2/12 max-w-xs md:block"
-          loading="lazy"
-          height={700}
-          width={320}
-        /> */}
+      <div className="text-darkTeal-500 section-container py-12 flex flex-col justify-center">
         <div className="flex flex-col skills-wrapper">
           <div className="flex flex-col">
             <p className="uppercase tracking-widest text-gray-light-1 seq">
@@ -48,7 +31,7 @@ const Skills = () => {
             <h1 className="text-6xl mt-2 font-medium text-gradient w-fit seq">
               My Skills
             </h1>
-            <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 seq">
+            <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 seq text-justify">
               I like to take responsibility to craft aesthetic user experience
               using modern frontend architecture.{" "}
             </h2>

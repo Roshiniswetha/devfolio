@@ -4,7 +4,7 @@ export const METADATA = {
     description:
       "Roshini Swetha is a Frontend Developer from Tamil Nadu, India, interested in crafting beautiful and functional applications.",
     siteUrl: "https://www.roshiniswetha.me/",
-    twitterHandle: "@roshiniswetha",
+    twitterHandle: "https://twitter.com/Roshiniswetha",
     keywords: [
       "Roshini Swetha",
       "Frontend Developer",
@@ -13,46 +13,17 @@ export const METADATA = {
       "Software Engineer",
       "Portfolio",
     ].join(", "),
-    // image: "https://res.cloudinary.com/dywdhyojt/image/upload/v1690572126/preview.png",
     language: "English",
   };
   
-  export const MENULINKS = [
-    {
-      name: "Home",
-      ref: "home",
-    },
-    {
-        name: "About",
-        ref: "about",
-      },
-    {
-      name: "Skills",
-      ref: "skills",
-    },
-    {
-      name: "Projects",
-      ref: "projects",
-    },
-    {
-      name: "Work",
-      ref: "work",
-    },
-    {
-      name: "Contact",
-      ref: "contact",
-    },
-  ];
-  
   export const TYPED_STRINGS = [
-    "A pragmatic Frontend Developer",
-    "I build things for the web",
-    "I create aesthetic and modern apps",
+    "I craft online experiences for users",
+    "I craft apps with a modern design aesthetic",
   ];
   
   export const SOCIAL_LINKS = [
     {
-      name: "mail",
+      name: "gmail",
       url: "mailto: swetharavindran24@gmail.com",
     },
     {
@@ -89,7 +60,7 @@ export const METADATA = {
       "redux",
       "nextjs",
       "tailwindcss",
-      // "styledcomponents",
+      "three.js",
       "antdesign",
       "material-ui",
     ],
@@ -98,56 +69,44 @@ export const METADATA = {
   };
   
   export const PROJECTS = [
-    // {
-    //   name: "Shotime",
-    //   image: "",
-    //   blurImage: "",
-    //   description:
-    //     "Developed with complete E-commerce functionality and User Authentication 🛍️",
-    //   gradient: ["#FFCF1B", "#FF881B"],
-    //   url: "https://shubh73-shotime.vercel.app/",
-    //   tech: ["react", "tailwindcss", "redux", "mongodb", "stripe"],
-    // },
     {
       name: "Healthy Basket",
-      image: "/projects/airbnb.webp",
-      blurImage: "/projects/blur/airbnb-blur.webp",
-      description: "An online Grocery store using ReactJS + Antdesign 🛏️",
-      gradient: ["#F14658", "#DC2537"],
+      image: "/photos/healthy-basket-io.png",
+      description: "A sample Online Grocery shop project with an attractive UI, and features like shopping cart, Easy Navigation using ReactJS + Antdesign",
       url: "https://healthy-basket-io.web.app/",
-      tech: ["react", "redux", "antd","firebase"],
+      codeLink: "https://github.com/Roshiniswetha/healthy-basket-frontend",
+      tech: ["react", "redux", "antdesign","firebase"],
     },
     {
       name: "Best Coir and Exports",
-      image: "/projects/medium.webp",
-      blurImage: "/projects/blur/medium-blur.webp",
-      description: "An eCommerce website using ReactJs + Material Ui ✍🏻",
-      gradient: ["#FFA62E", "#EA4D2C"],
+      image: "/photos/best-coir-and-exports.png",
+      description: "A simple e-commerce website includes a homepage, product listings and process. The site is responsive with seemless Experience. using ReactJs + Material Ui",
       url: "https://best-coir-and-exports.web.app/",
-      tech: ["react", "material ui", "antd"],
+      codeLink: "https://github.com/Roshiniswetha/BestCoirsandExports",
+      tech: ["react", "material-ui", "antdesign"],
     },
-    // {
-    //   name: "Inshorts",
-    //   image: "/projects/inshorts.webp",
-    //   blurImage: "/projects/blur/airbnb-blur.webp",
-    //   description:
-    //     "Conversational Voice Controlled React News Application using Alan AI 🎙",
-    //   gradient: ["#000066", "#6699FF"],
-    //   url: "https://shubh73-inshorts.netlify.app/",
-    //   tech: ["react", "chakra-ui", "alan"],
-    // },
     {
-      name: "3D Portfolio",
-      image: "/projects/tesla.webp",
-      blurImage: "/projects/blur/tesla-blur.webp",
-      description: "A Portfolio using ReactJs, ThreeJs and Tailwind css 🏎️",
-      gradient: ["#142D46", "#2E4964"],
+      name: "3D Devfolio",
+      image: "/photos/devfolio",
+      description: "A Portfolio using ReactJs, ThreeJs and Tailwind css",
       url: "https://best-coir-and-exports.web.app/",
-      tech: ["react", "three.js", "tailwind css"],
+      codeLink: "https://github.com/Roshiniswetha/devfolio",
+      tech: ["react", "three.js", "tailwindcss"],
     },
   ];
   
   export const WORK = [
+    // {
+    //   id: 0,
+    //   company: "Sri Ramakrishna Engineering College",
+    //   title: "BE-ECE",
+    //   location: "Coimbatore, Tamil Nadu",
+    //   range: "August 2016 - May 2020",
+    //   responsibilities: [
+    //     "Studied Electronics and Communication in Bachelors Degree",
+    //   ],
+    //   icon: "/icons/natwest.svg",
+    // },
     {
       id: 1,
       company: "NatWest",
@@ -155,12 +114,11 @@ export const METADATA = {
       location: "Chennai, Tamil Nadu",
       range: "December 2021 - Current",
       responsibilities: [
-        "Led creation of a captivating cross-platform e-commerce solution.",
-        "Enhanced UX with gamification and personalized push notifications ensuring an ever-improving shopping journey.",
-        "The app boasts a DAU base of 13k and an extensive MAU count of 170k.",
+        "• Revitalized an obsolete website by designing and implementing few components within the company's CSS frameworks, enhancing the user interface for a contemporary, user-centric experience",
+        "• Developed an online banking dashboard that significantly boosted user engagement and enhanced overall user satisfaction.",
+        "• Enhanced data accuracy and actionable insights by seamlessly integrating Adobe Analytics into the banking platform, leading to significant improvement in overall performance.",
       ],
-      url: "https://www.natwest.com/",
-    //   video: "/work/dukaan.mp4",
+      icon: "/icons/natwest.svg",
     },
     {
       id: 2,
@@ -169,12 +127,11 @@ export const METADATA = {
       location: "Bangalore, Karnataka",
       range: "June 2020 - Dec 2021",
       responsibilities: [
-        "Built their flagship product Q-Rate, a voice-based applicant screening platform.",
-        "Developed pixel-perfect responsive web applications achieving daily traffic of 1000-2000 users.",
-        "Successfully rolled out an error-logging and bug reporting system that cut user-reported bugs by 30%.",
+        "• Worked collaboratively in the WebCenter platform which enables users to upload/view packaging artworks and run approval cycles",
+        "• Revamped the packaging strategy using React and Spring Boot, resulting in a substantial reduction in development time and enhancing code maintainability across the entire team.",
+        "• Created REST API to handle order and integrated pricing workflows with React-Redux frontend"
       ],
-      url: "https://www.esko.com/en",
-    //   video: "/work/aviate.mp4",
+      icon: "/icons/esko-graphics.svg",
     },
     {
       id: 3,
@@ -183,12 +140,11 @@ export const METADATA = {
       location: "Bangalore, Karnataka",
       range: "Jan 2020 - June 2020",
       responsibilities: [
-        "Developed a cloud-based product from scratch, participated in end-to-end process and successful project delivery",
-        "Engineered essential UI elements and established REST APIs, User Auth, Docker, Deployment in AWS.",
-        "Implemented CRUD features for all the services and providers.",
+        "• Developed a cloud-based product from scratch, participated in end-to-end process and successful project delivery",
+        "• Engineered essential UI elements and established REST APIs, User Auth, Docker, Deployment in AWS.",
+        "• Implemented CRUD features for all the services and providers.",
       ],
-      url: "https://www.esko.com/en",
-    //   video: "/work/spacenos.mp4",
+      icon: "/icons/esko-graphics.svg",
     },
   ];
   

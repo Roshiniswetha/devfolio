@@ -116,10 +116,10 @@ export const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props })
     }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
   return (
     <group ref={islandRef} {...props}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+      <group rotation={[-Math.PI / 2, 0, -0.3]}>
         <mesh
           castShadow
-          receiveShadow
+        receiveShadow
           geometry={nodes.Object_2.geometry}
           material={materials["Material.001"]}
         />

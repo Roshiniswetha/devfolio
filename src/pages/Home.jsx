@@ -3,7 +3,9 @@ import { Suspense, useState, useRef, useEffect } from 'react';
 // import Loader from '../components/Loader';
 import Bird from '../models/bird';
 import { Island } from '../models/island';
+// import Sky from '../models/sky';
 import Cloud from '../models/cloud';
+import HomeInfo from './HomeInfo';
 
 function Home() {
   const [isRotating, setIsRotating] = useState(false);
@@ -11,7 +13,7 @@ function Home() {
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
-    let screenPosition = [0, -6.5, -43];
+    let screenPosition = [22, -7, -43];
     let rotation = [0, 0, 0];
 
     if (window.innerWidth < 768) {
@@ -45,7 +47,7 @@ function Home() {
       screenPosition = [0, 0, 0];
     } else {
       screenScale = [2,2,2]
-      screenPosition = [[-470, -40, -430],[10, 20, 90]];
+      screenPosition = [[-500, 10, -430],[10, 20, 90]];
 
       // [20, -40, -430];
     }
@@ -59,15 +61,15 @@ function Home() {
 
   const [cloudScale, cloudPosition] = adjustCloudForScreenSize();
   return (
-    <div className="bg-gradient-to-br from-yellow-500 to-white min-h-screen flex justify-center items-center">
+    <div className="bg-gradient-to-bl from-indigo-200 via-red-200 to-yellow-100 min-h-screen flex justify-center items-center">
     <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-        {/* {currentStage && <HomeInfo currentStage={currentStage} />}/ */}
-      </div>
+      <div className='absolute bottom-36 left-20 z-10 flex items-center justify-center'>
+       <HomeInfo currentStage={currentStage} />
+       </div>
       <Canvas
-        // className={`w-full h-screen bg-transparent ${
-        //   isRotating ? 'cursor-grabbing' : 'cursor-grab'
-        // }`}
+        className={`w-full h-screen bg-transparent ${
+          isRotating ? 'cursor-grabbing' : 'cursor-grab'
+        }`}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={null}>
@@ -85,11 +87,7 @@ function Home() {
           scale={cloudScale}
       />
       ))}
-      {/* <Cloud 
-       position={cloudPosition}
-       scale={cloudScale}
-      /> */}
-      <Bird />
+      {/* <Sky/> */}
       <Island 
         position={islandPosition}
         scale={islandScale}

@@ -1,16 +1,16 @@
 import React, { Suspense, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
-import robot from '../assets/glb/cute_home_robot.glb';
+import robot from '../assets/glb/robot_blender_school_project.glb';
 
 const RobotCanvas = () => {
   const { scene, animations } = useGLTF(robot);
   const robotRef = useRef();
   const { actions } = useAnimations(animations, robotRef);
-  console.log(actions, animations)
+  console.log('robot',actions, animations)
 
   useEffect(() => {
-    actions["Take 001"].play();
+    actions["Robot_Gear|CamLightEmptyAction"].play();
   }, []);
 
   return (
@@ -22,14 +22,13 @@ const Robot = () => {
   return (
     <Canvas
       shadows
-    //   frameloop='demand'
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
-        position: [4, -16, 18],
-        fov: 45,
+        position: [40, 13, 65],
+        fov: 30,
         near: 0.1,
-        far: 800,
+        far: 1000,
       }}
     >
         <directionalLight intensity={2.5} position={[0, 0, 1]} />
