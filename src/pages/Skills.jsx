@@ -17,21 +17,20 @@ const Skills = () => {
   }, [targetSection]);
 
   return (
-    <div className="bg-gradient-to-bl from-indigo-200 via-red-200 to-yellow-100 min-h-screen flex justify-center items-center">
     <section
-      className="w-full relative select-none mt-2 flex lg:flex-row flex-col max-container lg:items-center h-full"
+      className="w-full relative select-none flex lg:flex-row flex-col max-container lg:items-center h-full"
       ref={targetSection}
     >
-      <div className="text-darkTeal-500 section-container py-12 flex flex-col justify-center">
+      <div className="text-darkTeal-500 section-container md:py-12 flex flex-col justify-center">
         <div className="flex flex-col skills-wrapper">
           <div className="flex flex-col">
             <p className="uppercase tracking-widest text-gray-light-1 seq">
               SKILLS
             </p>
-            <h1 className="text-6xl mt-2 font-medium text-gradient w-fit seq">
+            <h1 className="mt-2 font-medium text-gradient w-fit seq lg:text-6xl md:text-4xl xs:text-3xl">
               My Skills
             </h1>
-            <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 seq text-justify">
+            <h2 className="lg:text-4xl md:text-2xl xs:text-xl font-medium md:max-w-lg w-full mt-2 seq text-justify">
               I like to take responsibility to craft aesthetic user experience
               using modern frontend architecture.{" "}
             </h2>
@@ -89,7 +88,6 @@ const Skills = () => {
         </div>
       </div>
     </section>
-    </div>
   );
 };
 

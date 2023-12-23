@@ -87,9 +87,9 @@ export const METADATA = {
     },
     {
       name: "3D Devfolio",
-      image: "/photos/devfolio",
+      image: "/photos/devfolio.png",
       description: "A Portfolio using ReactJs, ThreeJs and Tailwind css",
-      url: "https://best-coir-and-exports.web.app/",
+      url: "https://roshiniswetha.web.app/",
       codeLink: "https://github.com/Roshiniswetha/devfolio",
       tech: ["react", "three.js", "tailwindcss"],
     },

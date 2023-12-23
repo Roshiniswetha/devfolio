@@ -60,7 +60,6 @@ const ProjectsPage = ({ isDesktop, clientHeight }) => {
   };
 
   return (
-    <div  className="bg-gradient-to-bl from-indigo-200 via-red-200 to-yellow-100 min-h-screen">
     <section
       ref={targetSection}
       className= "text-darkTeal-500 min-h-screen w-full relative select-none section-container transform-gpu flex lg:flex-row flex-col"
@@ -70,10 +69,10 @@ const ProjectsPage = ({ isDesktop, clientHeight }) => {
           className="flex flex-col inner-container transform-gpu"
           ref={sectionTitle}
         >
-          <h2 className="text-darkTeal-500 text-6xl mt-2 font-medium w-fit seq">
+          <h2 className="text-darkTeal-500 lg:text-6xl md:text-4xl xs:text-3xl mt-2 font-medium w-fit seq">
             My Projects
           </h2>
-          <h2 className="text-darkTeal-500 text-[1.65rem] font-medium md:max-w-lg max-w-sm mt-2 seq">
+          <h2 className="text-darkTeal-500 lg:text-4xl md:text-2xl xs:text-xl font-medium mt-2 seq">
             Some things I&apos;ve built with love, expertise and a pinch of
             magical ingredients.{" "}
           </h2>
@@ -81,7 +80,7 @@ const ProjectsPage = ({ isDesktop, clientHeight }) => {
         <div
           className={`${
             clientHeight > 650 ? "mt-12" : "mt-8"
-          } flex project-wrapper w-fit seq`}
+          } flex flex-col project-wrapper w-full seq`}
         >
           {PROJECTS.map((project, index) => (
             <Projects
@@ -100,7 +99,6 @@ const ProjectsPage = ({ isDesktop, clientHeight }) => {
         }
       `}</style>
     </section>
-    </div>
   );
 };
 

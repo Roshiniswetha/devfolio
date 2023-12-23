@@ -8,7 +8,7 @@ import Footer from './pages/Footer';
 
 const App = () => {
 return (
-    <main className='bg-slate-300/20 h-full'>
+    <main className='bg-slate-300/20 w-full h-full background-color inline-block -z-10 right-0 md:top-52 xs:top-96 md:max-h-screen-md md:min-h-screen-md'>
       <Router>
         <Header />
         <Routes>

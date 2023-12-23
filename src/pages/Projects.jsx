@@ -23,21 +23,16 @@ const Projects = ({ project, classes, isDesktop }) => {
   }, [projectCard]);
 
   return (
-    <div className='ml-16'>
+    <>
     <a
       href={url}
-      className={`overflow-hidden rounded-3xl flex shadow-2xl ${additionalClasses}`}
+      className={'overflow-hidden rounded-3xl flex items-center mx-auto shadow-2xl bg-white xs:w-auto md:w-fit'}
       ref={projectCard}
       target="_blank"
       rel="noreferrer"
-      style={{
-        maxWidth: isDesktop ? "calc(100vw - 2rem)" : "calc(100vw - 4rem)",
-        flex: "1 0 auto",
-        WebkitMaskImage: "-webkit-radial-gradient(white, black)",
-      }}
     >
       <div
-        className={`h-[25rem] w-[38rem] bg-white projectTile rounded-3xl relative p-6 flex flex-col justify-between max-w-full`}
+        className={`h-[20rem] w-[28rem] bg-white projectTile rounded-3xl relative p-6 flex flex-col justify-between max-w-full`}
       >
         <img
           src="/project-bg.svg"
@@ -53,7 +48,7 @@ const Projects = ({ project, classes, isDesktop }) => {
         />
       </div>
     </a>
-    <h2 className="text-3xl flex justify-center items-center mt-8">{name}
+    <h2 className="text-3xl flex justify-center items-center mt-8 ">{name}
                   <Link
                     to={codeLink}
                     target='_blank'
@@ -64,12 +59,11 @@ const Projects = ({ project, classes, isDesktop }) => {
                   </Link>
     </h2>
 
-      <p className="text-lg mt-12 ml-12">{description} </p>
-    {/* <div className="flex justify-around items-center mt-12"></div> */}
-     <div className="flex items-center mt-12 mb-10">
+      <p className="lg:mx-96 my-5 lg:text-3xl md:text-2xl xs:text-xl mx-auto">{description} </p>
+     <div className="flex items-center justify-center mb-10">
             {tech.map((el, i) => (
               <img
-                className="ml-16"
+                className="ml-12"
                 src={`/skills/${el}.svg`}
                 alt={el}
                 height={45}
@@ -78,7 +72,7 @@ const Projects = ({ project, classes, isDesktop }) => {
               />
             ))}
           </div>
-          </div>
+          </>
   );
 };
 

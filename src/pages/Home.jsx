@@ -13,41 +13,44 @@ function Home() {
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
-    let screenPosition = [22, -7, -43];
+    
     let rotation = [0, 0, 0];
+    let screenPosition;
 
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [4, 8, -60];
     } else {
       screenScale = [1, 1, 1];
+      screenPosition = [22, -7, -43];
     }
 
     return [screenScale, screenPosition, rotation];
   };
 
-  const adjustPlaneForScreenSize = () => {
-    let screenScale, screenPosition;
+  // const adjustPlaneForScreenSize = () => {
+  //   let screenScale, screenPosition;
 
-    if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, 1.5, 0];
-    } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
-    }
+  //   if (window.innerWidth < 768) {
+  //     screenScale = [1.5, 1.5, 1.5];
+  //     screenPosition = [0, 1.5, 0];
+  //   } else {
+  //     screenScale = [3, 3, 3];
+  //     screenPosition = [0, -4, -4];
+  //   }
 
-    return [screenScale, screenPosition];
-  };
+  //   return [screenScale, screenPosition];
+  // };
 
   const adjustCloudForScreenSize = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, 0, 0];
+      screenScale = [0.9, 0.9, 0.9];
+      screenPosition = [-250, 0, -210];
     } else {
       screenScale = [2,2,2]
-      screenPosition = [[-500, 10, -430],[10, 20, 90]];
+      screenPosition = [-500, 10, -430];
 
       // [20, -40, -430];
     }
@@ -61,11 +64,10 @@ function Home() {
 
   const [cloudScale, cloudPosition] = adjustCloudForScreenSize();
   return (
-    <div className="bg-gradient-to-bl from-indigo-200 via-red-200 to-yellow-100 min-h-screen flex justify-center items-center">
-    <section className='w-full h-screen relative'>
-      <div className='absolute bottom-36 left-20 z-10 flex items-center justify-center'>
+    <section className='w-full h-screen relative md:max-xl:flex flex'>
+      {/* <div className=''> */}
        <HomeInfo currentStage={currentStage} />
-       </div>
+       {/* </div> */}
       <Canvas
         className={`w-full h-screen bg-transparent ${
           isRotating ? 'cursor-grabbing' : 'cursor-grab'
@@ -80,13 +82,13 @@ function Home() {
         groundColor='#000000'
         intensity={1}
       />
-      {cloudPosition.map((position, i) => (
+      {/* {cloudPosition.map((position, i) => ( */}
         <Cloud 
-          key={i}
-          position={position}
+          // key={i}
+          position={cloudPosition}
           scale={cloudScale}
       />
-      ))}
+      {/* ))} */}
       {/* <Sky/> */}
       <Island 
         position={islandPosition}
@@ -99,7 +101,6 @@ function Home() {
       </Suspense>
       </Canvas>
     </section>
-    </div>
   );
 }
 

@@ -15,17 +15,16 @@ function About() {
       );
     }, [targetSection]);
   return (
-    <div className="bg-gradient-to-bl from-indigo-200 via-red-200 to-yellow-100 min-h-screen flex justify-center items-center">
     <section
-      className="w-full relative select-none mt-2 flex lg:flex-row flex-col max-container lg:items-center h-full"
+      className="max-container"
       ref={targetSection}
     >
-        <div className="text-darkTeal-500 m-10">
-        <p className="uppercase tracking-widest seq">
+        <div className="text-darkTeal-500 m-2">
+        <p className="uppercase tracking-widest seq mb-4">
               About
             </p>
-            <h1 className="text-6xl mt-2 font-medium stext-gradient w-fit seq">
-              A Little Bit about me
+            <h1 className="lg:text-6xl md:text-4xl xs:text-3xl mt-2 font-medium text-gradient w-fit seq">
+              A Bit about me
             </h1>
         <p className="text-[1.20rem] font-medium md:max-w-lg w-full mt-2 seq">
           Hello! I'm Roshini Swetha, a Frontend Developer based in Tamil Nadu, India.
@@ -40,7 +39,7 @@ function About() {
           <Link to='https://twitter.com/Roshiniswetha' target='_blank'
                     rel='noopener noreferrer' className="text-burgendy-500 md:font-bold">Twitter.</Link>
           </p>
-            <h1 className="text-6xl mt-16 font-medium stext-gradient w-fit seq">
+            <h1 className="lg:text-6xl md:text-4xl xs:text-3xl mt-16 font-medium stext-gradient w-fit seq">
               My Experiences
             </h1>
             <Experience />
@@ -48,7 +47,6 @@ function About() {
         
         </div>
         </section>
-    </div>
   )
 }
 

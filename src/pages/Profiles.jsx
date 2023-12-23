@@ -4,7 +4,7 @@ import { SOCIAL_LINKS } from "../constants";
 
 const Profiles = () => {
   return (
-    <div className="flex justify-around items-center mt-12">
+    <div className="flex justify-around items-center mt-8">
     {SOCIAL_LINKS.map(({ name, url }) => (
         <div>
           <a

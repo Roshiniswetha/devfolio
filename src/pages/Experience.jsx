@@ -12,12 +12,9 @@ function Experience() {
         <p className="uppercase tracking-widest text-gray-light-1 seq">
           Career
         </p>
-        <div className='mt-5 flex flex-col gap-3 text-darkTeal-500 seq'>
-          <p>
-            Blending a diverse background, I've actively crafted technical
-            expertise through university studies, intensive coursework,
-            bootcamps, hands-on projects, and self-directed learning, setting
-            the stage for a successful transition into front-end development.
+        <div className="text-darkTeal-500 m-2">
+          <p className="seq text-justify">
+            Blending a diverse background, I've actively crafted technical expertise through university studies, intensive coursework, bootcamps, hands-on projects, and self-directed learning, setting the stage for a successful transition into front-end development.
           </p>
         </div>
 
