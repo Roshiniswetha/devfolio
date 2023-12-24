@@ -45,13 +45,13 @@ const Header = () => {
           Contact
         </NavLink>
 
-        {/* <NavLink
-          to=''
-          className= 'text-darkTeal-500'
-          download={'/documents/Roshini_Swetha_Frontend_Resume.pdf'}
-        > */}
-          <a className= 'text-darkTeal-500' href='/documents/Roshini_Swetha_Frontend_Resume.pdf' download>Resume</a>
-        {/* </NavLink> */}
+        <NavLink
+            className="text-darkTeal-50 flex font-medium"
+            to={"/documents/Roshini_Swetha_Frontend_Resume.pdf"}
+            target='_blank' rel='noopener noreferrer'
+        >
+            Resume <img className='inline w-1/2 h-1/2' src="/icons/link.svg"/>
+        </NavLink>
       </nav>
     </header>
   );

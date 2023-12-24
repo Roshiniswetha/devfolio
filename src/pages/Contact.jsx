@@ -1,13 +1,18 @@
-import { Suspense, useRef, useState } from 'react';
-// import emailjs from '@emailjs/browser';
-import { motion } from "framer-motion";
-import { Canvas } from '@react-three/fiber';
+import { useState, useEffect } from 'react';
+import { Loader } from '../components';
 import Robot from '../models/robot';
 
 const Contact = () => {
-  // const formRef = useRef(null);
+
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 8000);
+  // }, []);
+
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [isLoading, setIsLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [complete, setComplete] = useState(false);
   const [statusError, setStatusError] = useState('')
@@ -51,12 +56,15 @@ const Contact = () => {
 
   return (
     <section className='text-darkTeal-500 relative flex lg:flex-row flex-col max-container lg:items-center h-full'>
-      {/* {alert.show && <Alert {...alert} />} */}
+    {/* {isLoading ? (
+          <Loader />
+        ) : (
+          <> */}
 
       <div className='seq lg:mb-56'>
         <h1 className='lg:text-6xl md:text-4xl xs:text-3xl mt-2 seq mb-10'>Get in Touch</h1>
 
-        <h2 className="lg:text-3xl md:text-2xl xs:text-xl font-medium md:max-w-lg w-full mt-2 seq text-justify">If you want to work together on a project or just have a chat, please don't hesitate to contact me via email below.</h2>
+        <h2 className="lg:text-2xl md:text-xl xs:text-lg font-medium md:max-w-lg w-full mt-2 seq text-justify">If you want to work together on a project or just have a chat, please don't hesitate to contact me via email below.</h2>
 
         <button
             type='submit'
@@ -119,6 +127,7 @@ const Contact = () => {
       <div className='lg:w-1/2 w-full lg:h-[650px] md:h-[500px] h-[350px]'>
             <Robot scale={2.5} position-y={0} rotation-y={0}/>
       </div>
+      {/* </>)} */}
     </section>
   );
 };

@@ -1,14 +1,26 @@
+import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import { Home, About, Experience, Contact } from './pages';
+import { Header, Loader } from './components';
+import { Home, About, Contact } from './pages';
 import Skills from './pages/Skills';
 import ProjectsPage from './pages/ProjectsPage';
-// import './assets/styles.scss'
 import Footer from './pages/Footer';
 
 const App = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 6500);
+  }, []);
 return (
     <main className='bg-slate-300/20 w-full h-full background-color inline-block -z-10 right-0 md:top-52 xs:top-96 md:max-h-screen-md md:min-h-screen-md'>
+      {isLoading ? (
+          <Loader />
+        ) : (
+          <>
       <Router>
         <Header />
         <Routes>
@@ -20,6 +32,7 @@ return (
         </Routes>
         <Footer />
       </Router>
+      </>)}
     </main>
   );
 }

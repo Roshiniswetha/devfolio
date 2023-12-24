@@ -7,7 +7,6 @@ const RobotCanvas = () => {
   const { scene, animations } = useGLTF(robot);
   const robotRef = useRef();
   const { actions } = useAnimations(animations, robotRef);
-  console.log('robot',actions, animations)
 
   useEffect(() => {
     actions["Robot_Gear|CamLightEmptyAction"].play();

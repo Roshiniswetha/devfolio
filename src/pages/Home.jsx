@@ -1,9 +1,6 @@
 import { Canvas } from '@react-three/fiber';
-import { Suspense, useState, useRef, useEffect } from 'react';
-// import Loader from '../components/Loader';
-import Bird from '../models/bird';
+import { Suspense, useState } from 'react';
 import { Island } from '../models/island';
-// import Sky from '../models/sky';
 import Cloud from '../models/cloud';
 import HomeInfo from './HomeInfo';
 
@@ -28,20 +25,6 @@ function Home() {
     return [screenScale, screenPosition, rotation];
   };
 
-  // const adjustPlaneForScreenSize = () => {
-  //   let screenScale, screenPosition;
-
-  //   if (window.innerWidth < 768) {
-  //     screenScale = [1.5, 1.5, 1.5];
-  //     screenPosition = [0, 1.5, 0];
-  //   } else {
-  //     screenScale = [3, 3, 3];
-  //     screenPosition = [0, -4, -4];
-  //   }
-
-  //   return [screenScale, screenPosition];
-  // };
-
   const adjustCloudForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -52,7 +35,6 @@ function Home() {
       screenScale = [2,2,2]
       screenPosition = [-500, 10, -430];
 
-      // [20, -40, -430];
     }
     
 
@@ -88,8 +70,6 @@ function Home() {
           position={cloudPosition}
           scale={cloudScale}
       />
-      {/* ))} */}
-      {/* <Sky/> */}
       <Island 
         position={islandPosition}
         scale={islandScale}

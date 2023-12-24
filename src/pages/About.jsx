@@ -26,7 +26,7 @@ function About() {
             <h1 className="lg:text-6xl md:text-4xl xs:text-3xl mt-2 font-medium text-gradient w-fit seq">
               A Bit about me
             </h1>
-        <p className="text-[1.20rem] font-medium md:max-w-lg w-full mt-2 seq">
+        <p className="lg:text-2xl md:text-xl xs:text-lg font-medium w-full mt-2 seq">
           Hello! I'm Roshini Swetha, a Frontend Developer based in Tamil Nadu, India.
           <br />
           I love being in the outdoors and I proudly wear the hat of a loving pet caretaker. </p>

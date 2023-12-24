@@ -72,7 +72,7 @@ const ProjectsPage = ({ isDesktop, clientHeight }) => {
           <h2 className="text-darkTeal-500 lg:text-6xl md:text-4xl xs:text-3xl mt-2 font-medium w-fit seq">
             My Projects
           </h2>
-          <h2 className="text-darkTeal-500 lg:text-4xl md:text-2xl xs:text-xl font-medium mt-2 seq">
+          <h2 className="text-darkTeal-500 lg:text-2xl md:text-xl xs:text-lg font-medium mt-2 seq">
             Some things I&apos;ve built with love, expertise and a pinch of
             magical ingredients.{" "}
           </h2>
